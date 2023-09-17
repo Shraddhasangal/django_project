@@ -8,14 +8,14 @@ window.geometry("700x350")
 main_lst=[]
 lst=[]
 def Add():
-    lst = [name.get(),age.get(),contact.get()]
+    lst = [name.get(),age.get(),email.get(),contact.get()]
     main_lst.append(lst)
     messagebox.showinfo("Information","The data has been added successfully")
 
 def Save():
    with open("data_entry.csv","w") as file:
       Writer=writer(file)
-      Writer.writerow(["Name","Age","Contact"])
+      Writer.writerow(["Name","Age","Email","Contact"])
       Writer.writerows(main_lst)
       messagebox.showinfo("Information","Saved succesfully")
 
